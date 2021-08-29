@@ -34,6 +34,12 @@ print("y_train shape = " + str(y_train.shape))
 print("X_test shape = " + str(X_test.shape))
 print("y_test shape = " + str(y_test.shape))
 
+np.any(np.isnan(X_train))
+np.all(np.isfinite(X_train))
+
+np.any(np.isnan(y_train))
+np.all(np.isfinite(y_train))
+
 lr = LinearRegression().fit(X_train, y_train)
 print("LR coefficient is", lr.coef_)
 print("LR intercept is", lr.intercept_)
